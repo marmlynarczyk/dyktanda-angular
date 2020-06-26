@@ -1,0 +1,13 @@
+<div *ngIf='hasWrongAnswersAndComments && dyktandoData.checkAnswers'>
+<div *ngFor='let index2 of wrongAnswerWithComment'>
+   <span *ngFor='let subObj of mainClass.subObjects,let i = index'>
+       <span *ngIf='isString(subObj)'>{{subObj}}</span>
+       <span *ngIf='!isString(subObj)' [class.red]='index2 === i'>{{subObj.answers[subObj.correctAnswer]}}</span>         
+   </span>
+
+   <span>  -  {{mainClass.subObjects[index2].comment}}</span>  
+   
+        
+    
+</div>
+</div>

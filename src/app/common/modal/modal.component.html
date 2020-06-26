@@ -1,0 +1,25 @@
+<div class="modal" (click)="closePopup($event)" id="modal">
+  <div class="popup-wrapper">
+    <div class="CloseBtn-wrapper">
+      <button id="closePopup" class="closePopup-wrapper-button closePopup">
+        <div class="closePopup closePopupMarker"></div>
+      </button>
+    </div>
+    <app-login *ngIf="appState.modalText.status === 'login'"
+      ><h1>Zaloguj się</h1></app-login
+    >
+
+    <app-login *ngIf="appState.modalText.status === 'addDyktando'"
+      ><h1 style="color: red;">
+        Aby dodać dyktando musisz być zalogowany
+      </h1></app-login
+    >
+
+    <app-create-user
+      *ngIf="appState.modalText.status === 'createUser'"
+    ></app-create-user>
+    <app-generic-msg
+      *ngIf="appState.modalText.status === 'genericMsg'"
+    ></app-generic-msg>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<a  [routerLink]="['/dyktanda',dyktando.id]" class="noweDyktanda-box-link">
+    <div class="noweDyktanda-box">
+      <div>
+        <h2 class="noweDyktanda-box-h2">{{dyktando.title}}</h2>
+        <div class='lineContainer'>
+            <div class="left">autor:</div>
+            <div class='right'>{{dyktando.author}}</div>
+        </div>
+        <div class='lineContainer'>
+            <div class="left">testuje:</div>
+            <div class='right'>{{dyktando.tests?dyktando.tests:''}}</div>
+        </div>
+        <div class='lineContainer'>
+            <div class="left">długość:</div>
+            <div class='right'>{{dyktando.length}}</div>
+        </div>
+        <div class='lineContainer'>
+            <div class="left">dodano:</div>
+            <div class='right'>{{dyktando.added.seconds | stringToBoxDate}}</div>
+        </div>
+        <div class='lineContainer'>
+            <div class="left">klasa:</div>
+            <div class='right'>{{dyktando.classNum?dyktando.classNum: "wszystkie"}}</div>
+        </div>        
+        <button class="noweDyktanda-box-button">Rozwiąż</button>
+      </div>
+    </div>
+</a>

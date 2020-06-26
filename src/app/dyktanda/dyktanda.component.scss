@@ -1,0 +1,45 @@
+.dyktandaList{
+    width:100%;
+}
+.dyktandaList-bg{
+    background-image: url(/assets/img/linia.jpg);
+}
+.dyktandaList-bg .contentWrapper{
+    padding:20px;
+}
+.dyktandoList-Label{
+    font-size:24px;
+    padding:10px 0;
+}
+.dyktandaList-items{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dyktandoList-select{
+    width:100%;
+    padding:10px;
+    border:1px solid grey;
+    border-radius: 6px;
+    font-size:16px;  
+    
+}
+
+
+.dyktandaList-items-h2{
+    text-align:center;
+    width:100%;
+    padding:50px;
+}
+@-moz-document url-prefix() {
+    .dyktandoList-select option{
+        font-family:arial;
+        font-weight:800;
+        font-style: italic ; 
+    }
+  }
+@media(min-width:720px){
+    .dyktandaList-items{
+        justify-content: space-between;
+    }
+}

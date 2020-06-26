@@ -1,0 +1,24 @@
+.dyktando {
+  display: flex;
+  align-items: center;
+
+  word-spacing: 15px;
+  font-size: 28px;
+  flex-wrap: wrap;
+}
+.dyktando-word {
+  display: flex;
+  align-items: center;
+  white-space: pre-wrap;
+  margin-right: 32px;
+  min-height: 100px;
+}
+
+.dyktando-button {
+  margin: 40px 10px;
+  font-size: 24px;
+  padding: 10px 16px;
+  background-color: #4babc0;
+  color: white;
+  border-radius: 6px;
+}

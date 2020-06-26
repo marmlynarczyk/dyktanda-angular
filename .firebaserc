@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todof-2306a": {
+      "hosting": {
+        "dyktanda": [
+          "todof-2306a"
+        ]
+      }
+    }
+  }
+}

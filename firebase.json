@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "dyktanda",
+      "public": "dist/dyktanda",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

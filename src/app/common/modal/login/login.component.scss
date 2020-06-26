@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+.login{
+    background-color: white;
+    width:600px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    border-radius:14px;
+}
+.login-wrapper{
+width:400px;
+padding: 10px 0 40px 0;
+}
+ h1{
+    text-align: center;
+margin-bottom: 30px;
+}
+.login-input-email,.login-input-password,.login-button-email,.login-button-google,.login-button-createAccount{
+display: block;
+font-size:24px;
+background-color: transparent;
+border-bottom:3px solid rgb(102, 102, 102);
+padding:4px;
+margin-bottom: 5px;
+width:100%;
+outline:none;
+}
+.login-input-email:focus,.login-input-password:focus{
+    border-bottom-color:orange;
+}
+.login-button-email,.login-button-google,.login-button-createAccount{
+    margin-top:40px;
+    font-size: 20px;
+    border: 3px solid rgb(102, 102, 102);
+    padding:12px 0;
+    width:100%;
+    border-radius:8px;
+    margin-bottom:0px;
+}
+.login-button-email:focus,.login-button-google:focus,.login-button-createAccount:focus{
+border-color: orange;;
+color:orange;
+}
+.login-button-google,.login-button-createAccount{
+    margin-top:20px;
+}
+
+.login-errorMsg{
+    color:red;
+    padding:25px 0 15px;
+}
+.closePopup-wrapper{
+    top:0px;
+    left:100%;
+    position:relative;
+   
+    display: inline-block;
+    width:40px;
+    height:40px;
+}
+.error-wrapper{
+    color:red;
+    height:20px;
+    width:100%;
+    padding-bottom: 25px;;
+}
+input.ng-invalid.ng-touched{
+    border-color:red;
+} 
+.error {
+    color:red;
+    font-size:24px;
+}

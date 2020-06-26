@@ -1,0 +1,8 @@
+<div class='bg'>
+    <div class="flexbox-right contentWrapper"><ul>
+    <li *ngFor="let link of links">
+      <a [routerLink]="link.path">{{ link.placeholder }}</a>
+    </li>
+  </ul>
+</div>
+</div>

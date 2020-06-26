@@ -1,0 +1,9 @@
+<div class="navBar">
+  <nav [ngClass]="{ nav_links: true, active: open.navOpen }">
+    <ul>
+      <li *ngFor="let link of links">
+        <a [routerLink]="link.path">{{ link.placeholder }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

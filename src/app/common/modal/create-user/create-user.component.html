@@ -1,0 +1,52 @@
+<div class="login-wrapper">
+  <form [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
+    <h1>Załóż konto</h1>
+    <input
+      type="email"
+      class="login-input-email"
+      placeholder="email"
+      formControlName="email"
+    />
+    <div class="error-wrapper"><p
+      class="errorMsg"
+      *ngIf="
+        createUserForm.controls.email.invalid &&
+        createUserForm.controls.email.touched
+      "
+    >
+      Prosze podać prawidłowy adres email!
+    </p></div>
+    <input
+      type="password"
+      class="login-input-password"
+      placeholder="hasło"
+      formControlName="password"
+      (blur)="onBlur()"
+    />
+    <div class="error-wrapper">
+    <p
+      class="errorMsg"
+      *ngIf="
+        createUserForm.controls.repeatPassword.invalid &&
+        createUserForm.controls.repeatPassword.touched
+      "
+    >
+      {{ passwdErrMsg }}
+    </p></div>
+    <input
+      type="password"
+      class="login-input-password"
+      placeholder="powtórz hasło"
+      formControlName="repeatPassword"
+      (blur)="onBlur()"
+    />
+
+    <button
+      type="submit"
+      class="login-button-createAccount"
+      (click)="createAccount()"
+    >
+      Załóż konto
+    </button>
+  </form>
+</div>

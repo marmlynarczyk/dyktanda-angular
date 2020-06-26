@@ -1,0 +1,26 @@
+.bg{
+    background-color: var(--Blue);
+}
+.bg ul li{
+    display:inline-block;
+}
+
+.bg ul li a{
+    text-decoration: none;
+    padding:20px 30px;
+    padding-right:0;
+    color:white;
+    display: inline-block;
+    width:auto;
+    font-size: 18px; 
+}
+.bg ul li a:hover{
+    color:rgb(219, 219, 219);
+    transition: color 0.2s;
+}
+
+@media (max-width:756px){
+    .bg{
+        display: none;
+    }
+}

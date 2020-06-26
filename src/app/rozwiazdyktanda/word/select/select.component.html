@@ -1,0 +1,13 @@
+<div class="dyktando-select">
+  <div
+    class="dyktando-select-option"
+    *ngFor="let answer of answerObj.answers; let i = index"
+    (click)="handleClick(i)"
+    [class.hidden]='i !== selected&&selected!==null'
+    [class.active]='i === selected&&selected!==null'
+    [class.correct]='answerObj.correctAnswer === answerObj.selected && dyktandoData.checkAnswers'
+    [class.wrong]='answerObj.correctAnswer !== answerObj.selected && dyktandoData.checkAnswers'
+  >
+    {{ answer }}
+  </div>
+</div>

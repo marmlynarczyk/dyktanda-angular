@@ -1,0 +1,95 @@
+.kontaktSection{
+    padding: 20px 0;
+    width:100%;
+    background-image:url(/assets/img/blueBg.png);
+    color:white;
+    font-size:24px;
+}
+.kontaktSection::before{
+    background-image: url(/assets/img/deko_blue.png);
+    content: " ";
+    position:absolute;
+    transform:translateY(-27px) rotate(180deg);
+    width: 100%;
+    height: 7px;
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index:1;
+}
+.kontaktSection-name, .kontaktSection-email, .kontaktSection-message{
+display:inline-block;
+width:100%;
+height:34px;
+border-radius:6px;
+border:1px rgb(245, 245, 245) solid;
+padding-left: 10px;
+font-size: 18px;
+border:3px solid rgba(0,0,0,0);
+
+}
+.kontaktSection-name-wrapper, .kontaktSection-email-wrapper{
+    padding-top:5px;
+    width:100%;
+}
+.kontaktSection-message-wrapper{
+ padding-top:   5px;
+}
+.kontaktSection-name:focus, .kontaktSection-email:focus, .kontaktSection-message:focus,.kontaktSection-button:focus {
+    outline:none;
+    border:3px solid orange;
+}
+.kontaktSection-message{
+    height:300px;
+    padding-top:10px;
+}
+.kontaktSection-legend{
+    font-size:36px;
+    text-align:center;
+    padding-bottom:20px;
+}
+.kontaktSection-contentWrapper{
+    display:inline-block;
+    max-width:1200px;
+}
+
+.kontaktSection-email-label,.kontaktSection-name-label,.kontaktSection-message-label{    
+    display: block;
+    margin-bottom:12px;
+}
+.kontaktSection-button{
+    font-size:20px;
+    padding:13px 40px;
+    background-color:white;
+    margin-top:30px;
+    border-radius: 6px;
+    border:3px solid rgba(0,0,0,0);
+}
+.ng-invalid.ng-touched{
+    border-color:red;
+}
+.kontaktSection-errormessage{
+    color:rgb(46, 46, 46);
+    font-size:18px;
+    font-family:arial;
+    font-weight:400;
+    
+}
+.kontaktSection-errormessage-wrapper{
+    height:30px;
+    min-width:5px;
+    margin-top:10px;
+}
+.kontaktSection-nameemail-wrapper{
+    display:flex;
+    align-items: top;
+    flex-wrap:wrap;
+}
+@media (min-width:940px){
+    .kontaktSection-name-wrapper, .kontaktSection-email-wrapper{
+        width: 46%;
+        display: inline-block;
+    }  
+    .kontaktSection-name-wrapper{
+        margin-right:8%;
+    }
+}

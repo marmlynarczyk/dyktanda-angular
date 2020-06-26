@@ -1,0 +1,28 @@
+   
+      <div class="login-wrapper">          
+        <form [formGroup]='signUpForm' (ngSubmit)='onSubmit()'>  
+          <ng-content></ng-content>        
+        <input
+          type="email"
+          class="login-input-email"
+          placeholder="email"
+          formControlName='email'
+        />
+        <div class="error-wrapper"><p *ngIf="!signUpForm.controls.email.valid &&signUpForm.controls.email.touched">podany email jest nieprawidłowy</p></div>
+        <input
+          type="password"
+          class="login-input-password"
+          placeholder="hasło"
+          formControlName='password'
+        />
+        <div class="error-wrapper">
+          <p *ngIf="!signUpForm.controls.password.valid &&signUpForm.controls.password.touched">hasło musi mieć co najmniej 6 znaków</p></div>
+        <button class="login-button-email" type='Submit'>Zaloguj</button>
+        <button class="login-button-google" (click)="loginWithGoogle()" >
+          Zaloguj z Google
+        </button>
+        <button class="login-button-createAccount" (click)="createAccount()">Załóż konto</button>
+    </form>
+      </div>
+    
+ 

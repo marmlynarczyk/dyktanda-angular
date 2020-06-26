@@ -1,0 +1,39 @@
+.dyktando-select{
+    display:inline-block;
+    padding:0 3px;
+    text-align: center;
+    min-height: 82px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width:32px;   
+}
+.dyktando-select.active{
+    padding: 0;
+}
+.dyktando-select-option{
+    width:32px;
+    padding:5px 0;
+    vertical-align: middle;
+    
+}
+.dyktando-select-option.active{
+    border-bottom:2px solid black;
+    margin: 15px 0;
+    padding: 0;
+}
+.dyktando-select-option:first-child{
+    border-bottom:2px solid black;
+    
+}
+.hidden{
+    display: none;
+}
+.dyktando-select-option.active.wrong{
+    color:red; 
+    border-color:red;   
+}
+.dyktando-select-option.active.correct{
+    color:green; 
+    border-color:green;   
+}

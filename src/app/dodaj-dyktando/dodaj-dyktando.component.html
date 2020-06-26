@@ -1,0 +1,60 @@
+<section class="bg">
+  <div class="contentWrapper">
+    <form [formGroup]='addDyktando' (ngSubmit)="onSubmit($event)">
+      <fieldset>
+        <div class="DodajDyktando-wrapper">
+          <legend class="DodajDyktando-wrapper-h1">Dodaj Dyktando</legend>
+          <div class="dyktandoTitle">
+            <label class="dyktandoTitle-label" for="dyktandoTitle-input"
+              >Tytuł:</label
+            >
+            <input
+              name="title"
+              formControlName="title"
+              class="dyktandoTitle-input"
+              id="dyktandoTitle-input"
+              autoFocus   
+              placeholder="tytuł dyktanda"           
+            />
+
+            <span class="dyktandoTitle-input-error" *ngIf='addDyktando.controls.title.invalid &&addDyktando.controls.title.touched'>
+              to pole jest wymagane
+            </span>
+          </div>
+
+          <div class="KlasaTestuje">
+            <div class="dyktandoKlasa-wrapper">
+              <label class="dyktandoKlasa-label">Klasa:</label>
+              <select formControlName=classNum class="dyktandoList-select">
+                <option *ngFor='let o of tdyktandaSelectOptions.classNum.options,let i = index' [value]='o.value' 
+                [selected]="i===tdyktandaSelectOptions.classNum.default">{{o.label}}</option>
+            </select>
+            </div>
+            <div class="dyktandoTestuje-wrapper">
+              <label class="dyktandoTestuje-label" for="dyktandoTestuje-label">
+                Testuje:
+              </label>
+              <select formControlName='tests' class="dyktandoList-select">
+                <option *ngFor='let o of tdyktandaSelectOptions.tests.options,let i = index' [value]='o.value' 
+                [selected]="i===tdyktandaSelectOptions.tests.default">{{o.label}}</option>
+              </select>
+              
+            </div>
+          </div>
+        </div>
+
+        <textarea formControlName='dyktando' class="DodajDyktando-textArea">Krówka balbinka poje{*chh}ała nad morze</textarea><br>
+        <button class="DodajDyktando-button">
+          Wyślij
+        </button>
+        <div *ngIf='errorMsg'>
+        <p class="dyktando-error">
+          <span class="dyktando-error-span">
+            Wystąpił następujący błąd:
+          </span>
+          <br />          
+        </p><div >{{errorMsg.part}} - {{errorMsg.code}} </div></div>
+      </fieldset>
+    </form>
+  </div>
+</section>

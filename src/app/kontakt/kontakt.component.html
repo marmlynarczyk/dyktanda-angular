@@ -1,0 +1,70 @@
+<section class="kontaktSection">
+  <div class="contentWrapper">
+    <div class="kontaktSection-formwrapper">
+      <form [formGroup]='kontaktForm' (ngSubmit)="onSubmit()" >
+        <fieldset>
+          <legend class="kontaktSection-legend">Napisz do nas:</legend>
+          <div class="kontaktSection-nameemail-wrapper">
+            <div class="kontaktSection-name-wrapper">
+              <label
+                for="kontaktSection-name"
+                class="kontaktSection-name-label"
+                
+              >
+                Twoje Imię:
+              </label>
+
+              <input  name="name" id="kontaktSection-name"  class="kontaktSection-name"   formControlName='name' />
+              <div class="kontaktSection-errormessage-wrapper" >
+                <p class="kontaktSection-errormessage" *ngIf='this.kontaktForm.controls.name.invalid&&this.kontaktForm.controls.name.touched'>
+                  To pole nie może być puste
+                </p>
+              </div>
+            </div>
+            <div class="kontaktSection-email-wrapper">
+              <label
+                for="kontaktSection-email"
+                class="kontaktSection-email-label"
+              >
+                Twój email:
+              </label>
+              <input  name="email" type='email'  id="kontaktSection-email" class="kontaktSection-email" formControlName='email'/>
+              <div class="kontaktSection-errormessage-wrapper">
+                <p class="kontaktSection-errormessage" *ngIf='this.kontaktForm.controls.email.invalid&&this.kontaktForm.controls.email.touched'>
+                  adres email jest nieprawidłowy
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="kontaktSection-message-wrapper">
+            <label
+              for="kontaktSection-message"
+              class="kontaktSection-message-label"
+              
+            >
+              Wiadomość:
+            </label>
+            <textarea 
+              name="message"
+              id="kontaktSection-message"
+              class="kontaktSection-message"
+              formControlName='message'
+            >
+</textarea
+            >
+
+            <div class="kontaktSection-errormessage-wrapper">
+              <p class="kontaktSection-errormessage"  *ngIf='this.kontaktForm.controls.message.invalid&&this.kontaktForm.controls.message.touched'>
+                To pole nie może być puste
+              </p>
+            </div>
+
+            <button class="kontaktSection-button" type='submit' click='handleClick($event)'>
+              Wyślij
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

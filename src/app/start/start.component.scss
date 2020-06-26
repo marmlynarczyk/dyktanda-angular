@@ -1,0 +1,126 @@
+.bg{
+    background-image:url(/assets/img/linia.jpg) ; 
+    padding: 70px 0;  
+}
+.features{
+    background-image: url(/assets/img/blueBg.png);
+}
+.noweDyktanda-boxWrapper{
+  display: flex;
+  flex-direction: column;    
+  justify-content:space-around;
+  align-items: center;
+  height:1000px;
+}
+@media (min-width:756px){
+  .app-dyktando:nth-child(3){
+      display: none;
+  }
+  .noweDyktanda-boxWrapper{
+      
+      flex-direction: row;    
+      justify-content:space-around;
+      align-items: flex-start;
+      height: 340px;
+  }
+}
+
+@media (min-width:1070px){
+  .app-dyktando:nth-child(3){
+      display: flex;
+  }
+}
+h1{
+  color:#003876;
+  text-decoration: underline;
+  padding-bottom: 50px;
+  font-size:36px;
+  text-align:center;
+}
+/*FEATURES*/
+.features::before{
+    background-image: url(/assets/img/deko_b.png);
+    position:relative;
+    content:"  ";
+    height:7px;
+    background-size:contain;
+    width:100%;
+    background-repeat: repeat-x;
+    display:block;
+}
+
+.features-h2{
+    padding:20px 0;
+    text-align:center;
+    color:white;
+    padding:70px 0;
+}
+.featuresGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.featuresGrid-box {
+    padding-bottom: 30px; 
+    max-width: 575px; 
+    margin:0 auto;
+  }
+  .featuresGrid-box-left img {
+    width: 145px;
+    padding-right: 30px;
+  }
+  .featuresGrid-box-left {
+  }
+  .featuresGrid-box-left,
+  .featuresGrid-box-right {
+    display: inline-block;
+  }
+  .featuresGrid-box-right {
+    width: 100%;
+    max-width:430px;  
+  }
+  .featuresGrid-box-h3 {
+    color: #f9eb79;
+    text-decoration: underline;
+    margin-bottom: 10px ;
+  }
+  .featuresGrid-box-p {
+    color: white;
+    line-height: 20px;
+    font-family: "Roboto";
+    font-size: 16px;
+  }
+  .featuresGrid-box-p {
+    font-size: 1rem;
+  }
+  @media screen and (min-width:520px){
+      .featuresGrid-box-right{
+          width:calc(100% - 145px)
+      }
+      .featuresGrid-box {
+        display:flex;
+        align-items:flex-start;  
+      }
+  }
+  @media screen and (min-width: 576px) {
+    .featuresGrid-box-p {
+      font-size: calc(1rem + 2 * (100vw - 576px) / (1200 - 576));
+    }
+  
+  }
+  @media screen and (min-width:756px){
+    .featuresGrid-box-right{
+        width:calc(100% - 145px)
+    }
+  }
+  @media screen and (min-width:980px){
+    .featuresGrid{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap:30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .featuresGrid-box-p {
+      font-size: 1.125rem;
+    }
+  }
+  

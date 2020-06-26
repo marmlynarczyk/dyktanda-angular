@@ -1,0 +1,7 @@
+
+<div class="dyktando-word">
+<div *ngFor='let part of word.subObjects,let index2 = index'>
+<div *ngIf='isString(part)'>{{part}}</div>
+<app-select *ngIf='!isString(part)' [answerObj]='part' [index1]='index1' [index2]='index2' ></app-select>
+</div></div>
+

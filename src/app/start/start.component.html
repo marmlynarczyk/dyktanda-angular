@@ -1,0 +1,21 @@
+<section class="bg"><div class="contentWrapper">    
+  <h1 class="noweDyktanda-h1">Najnowsze dyktanda</h1>
+  <div class="noweDyktanda-boxWrapper"> 
+  <app-dyktando-box  class='app-dyktando' *ngFor='let box of dyktanda| async ' [dyktando]='box'> </app-dyktando-box>
+</div> </div></section>
+<section class="features">
+    <div class="contentWrapper">
+      <h2 class="features-h2">Dlaczego Mojedyktando.pl?</h2>
+      <div class="featuresGrid">
+        <div class="featuresGrid-box" *ngFor='let box of features.boxes'>
+            <div class="featuresGrid-box-left">
+              <img [src]='"/assets/img/" + box.image + ".svg"' [alt]="box.alt" />
+            </div>
+            <div class="featuresGrid-box-right">
+              <h3 class="featuresGrid-box-h3">{{box.header}}</h3>
+              <p class="featuresGrid-box-p">{{box.text}}</p>
+            </div>
+          </div>
+    </div></div>
+  </section>
+

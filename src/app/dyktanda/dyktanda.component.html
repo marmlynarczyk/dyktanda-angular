@@ -1,0 +1,20 @@
+<section class="dyktandaList-bg">
+    <div class="contentWrapper">
+      <div class="selectWrapper">
+        <div class="dyktandoList">
+          <div class="dyktandoList-Label">Sortuj według</div>
+          <app-custom-select name="sort"></app-custom-select>
+          <div class="dyktandoList-Label">długość: </div>
+          <app-custom-select name="dLength"></app-custom-select>
+          <div class="dyktandoList-Label"> testuje:</div>
+          <app-custom-select name="tests"></app-custom-select>
+          <div class="dyktandoList-Label">klasa: </div>
+          <app-custom-select name="classNum"></app-custom-select>
+        </div>
+      </div>
+      <div class="dyktandaList-items">
+        <app-dyktando-box *ngFor='let dyktando of dyktanda' [dyktando]='dyktando'></app-dyktando-box>
+        <h2 *ngIf='dyktanda.length===0' class="dyktandaList-items-h2">Niestety nic nie znaleziono!</h2>
+      </div>
+    </div>   
+  </section>

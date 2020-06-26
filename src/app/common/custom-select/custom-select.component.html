@@ -1,0 +1,3 @@
+<select (change)=handleChange($event) class='dyktandoList-select'>
+    <option *ngFor='let opt of dyktandaSelect[name].options, let i = index' [value]='i' [selected]='i === dyktandaSelect[name].currentValue'>{{opt.label}}</option>
+</select>
