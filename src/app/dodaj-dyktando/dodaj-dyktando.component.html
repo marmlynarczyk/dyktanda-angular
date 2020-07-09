@@ -42,8 +42,17 @@
             </div>
           </div>
         </div>
-
-        <textarea formControlName='dyktando' class="DodajDyktando-textArea">Krówka balbinka poje{*chh}ała nad morze</textarea><br>
+        
+        <p class='instructions'>
+          INSTRUKCJA<br>
+          Pole wybory wstawiane jest poprzez dodanie nawiasów klamrowych  <span class='red'>{{'{ }'}}</span><br>
+          Wewnątrz nawiasów umieszczamy odpowiedzi oddzielone od siebie znakiem <span class='red'>|</span><br>
+          Prawidłowa odpowiedź musi być poprzedzona znakiem <span class='red'>*</span><br>
+          Komentarz pojawiacy się po sprawdzeniu odpowiedzi umieszczamy poprzez dodanie znaku <span class='red'>#</span> przed komentarzem.
+          dla przykładu:<br>
+          <span class='instructions-bigger'>wr<span class='red'>{{'{'}}u|*ó #ponieważ wróg odmienia się na wrogowie{{'}'}}</span>g</span>
+        </p>
+        <textarea formControlName='dyktando' class="DodajDyktando-textArea"></textarea><br>
         <button class="DodajDyktando-button">
           Wyślij
         </button>

@@ -1,7 +1,8 @@
-<p>rozwiazdyktanda works! ID = {{id}}</p>
-{{dyktando?dyktando.content:""}}
+<div class="bg">
+<div class="contentWrapper">
+    <div><h1>{{title}}</h1></div>
 <div class="dyktando">
-<div *ngFor='let word of dyktando, let index1 = index'>
+    <div *ngFor='let word of dyktando, let index1 = index'>
     <div *ngIf='isString(word)' class='dyktando-word'>{{word}}</div>
     <app-word *ngIf='!isString(word)' [word]='word' [index1]='index1'></app-word>
 </div>
@@ -9,6 +10,8 @@
 <button class='dyktando-button' (click)='handleCheckAnswers()'> Rozwiąż</button>
 <div *ngFor='let answerObj of dyktando, let i = index' >
     <app-hints *ngIf='!isString(answerObj)' [index]='i'></app-hints>
+</div>
+</div>
 </div>
 
 

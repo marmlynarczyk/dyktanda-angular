@@ -1,6 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { getData } from "../common/getData.service";
 import { Observable } from "rxjs";
 import { Dyktando } from "../common/dyktanda.interface";
 import { dyktandoDataService } from "./dyktandoData.service";
@@ -11,17 +10,17 @@ import {isString} from './isString'
   templateUrl: "./rozwiazdyktanda.component.html",
   styleUrls: ["./rozwiazdyktanda.component.scss"],
 })
-export class RozwiazdyktandaComponent implements OnInit {
+export class RozwiazdyktandaComponent implements OnInit,OnDestroy {
   id;
   document: Observable<Dyktando>;
   dyktando;
   isString;
+  title:string|null
   
   constructor(
     private activatedRoute: ActivatedRoute,
-    private getDyktanda: getData,
     public dyktandoData: dyktandoDataService
-  ) {
+  ) {  
     this.isString = isString
     this.activatedRoute.params.subscribe((params) => {
       this.id = params["id"];
@@ -31,9 +30,16 @@ export class RozwiazdyktandaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dyktandoData.dyktando.subscribe(data=>{
-      this.dyktando = data
+    this.dyktandoData.dyktando.subscribe(data=>{     
+      if(data!==null){        
+        this.dyktando = data.content
+        this.title = data.title
+      }
+      
     })
+  }
+  ngOnDestroy(){
+    this.dyktandoData.checkAnswers = false
   }
   handleCheckAnswers(){
     this.dyktandoData.checkAnswers = true

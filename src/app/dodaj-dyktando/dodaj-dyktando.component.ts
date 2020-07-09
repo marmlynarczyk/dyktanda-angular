@@ -50,7 +50,7 @@ export class DodajDyktandoComponent implements OnInit {
           this.tdyktandaSelectOptions.tests.default
         ].value
       ),
-      dyktando: new FormControl("Krówka balbinka poje{*chh}ała nad morze"),
+      dyktando: new FormControl(),
     });
   }
   onSubmit(event) {
