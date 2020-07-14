@@ -55,7 +55,6 @@ export class getData {
       switchMap(([classNum$, dLength$, tests$, orderBy, limit]) =>
         afs
           .collection("dyktanda", (ref) => {
-            console.log(dLength$);
             let query:
               | firebase.firestore.CollectionReference
               | firebase.firestore.Query = ref;

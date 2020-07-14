@@ -13,7 +13,7 @@ import { appStateService } from "../../app-state.service";
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.scss"],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   @ContentChild('elementRef',{static:true}) elementRed: ElementRef
   signUpForm: FormGroup;
 
@@ -29,14 +29,11 @@ export class LoginComponent implements OnInit {
       ]),
     });
   }
-
-  ngOnInit(): void {}
   loginWithGoogle() {
     this.userService.login();
   }
   createAccount() {
-    this.state.modalText.status = "createUser";
-    this.state.modalOpen = true;
+    this.state.createAccount();
   }
   onSubmit() {
     if(this.signUpForm.valid){
