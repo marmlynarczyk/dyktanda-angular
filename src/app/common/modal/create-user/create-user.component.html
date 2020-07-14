@@ -7,15 +7,17 @@
       placeholder="email"
       formControlName="email"
     />
-    <div class="error-wrapper"><p
-      class="errorMsg"
-      *ngIf="
-        createUserForm.controls.email.invalid &&
-        createUserForm.controls.email.touched
-      "
-    >
-      Prosze podać prawidłowy adres email!
-    </p></div>
+    <div class="error-wrapper">
+      <p
+        class="errorMsg"
+        *ngIf="
+          createUserForm.controls.email.invalid &&
+          createUserForm.controls.email.touched
+        "
+      >
+        Prosze podać prawidłowy adres email!
+      </p>
+    </div>
     <input
       type="password"
       class="login-input-password"
@@ -24,15 +26,16 @@
       (blur)="onBlur()"
     />
     <div class="error-wrapper">
-    <p
-      class="errorMsg"
-      *ngIf="
-        createUserForm.controls.repeatPassword.invalid &&
-        createUserForm.controls.repeatPassword.touched
-      "
-    >
-      {{ passwdErrMsg }}
-    </p></div>
+      <p
+        class="errorMsg"
+        *ngIf="
+          createUserForm.controls.repeatPassword.invalid &&
+          createUserForm.controls.repeatPassword.touched
+        "
+      >
+        {{ passwdErrMsg }}
+      </p>
+    </div>
     <input
       type="password"
       class="login-input-password"

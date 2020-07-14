@@ -11,7 +11,7 @@ import { appStateService } from "../../app-state.service";
 export class LoginBarComponent {
   user;
 
-  constructor(public userService: UserService, private state: appStateService) {
+  constructor(public userService: UserService, public state: appStateService) {
     userService.user.subscribe((data) => {
       if (data) {
         this.user = data;

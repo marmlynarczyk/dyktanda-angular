@@ -6,13 +6,9 @@ import {appStateService} from '../../app-state.service'
   templateUrl: './generic-msg.component.html',
   styleUrls: ['./generic-msg.component.scss']
 })
-export class GenericMsgComponent implements OnInit {
+export class GenericMsgComponent {
 
   constructor(public state: appStateService) {
    
    }
-
-  ngOnInit(): void {
-  }
-
 }
