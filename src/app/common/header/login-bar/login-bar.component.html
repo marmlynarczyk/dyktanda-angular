@@ -1,7 +1,7 @@
 <div class="loginBar">
   <div class="contentWrapper flexbox-right">
-    <div class="login" *ngIf="!user" (click)="login()">Zaloguj się</div>
-    <div class="create" *ngIf="!user" (click)='createAccount()'>Załóż konto</div>
+    <div class="login" *ngIf="!user" (click)="state.login()">Zaloguj się</div>
+    <div class="create" *ngIf="!user" (click)='state.createAccount()'>Załóż konto</div>
     <div class="login" *ngIf="user ">{{ user.displayName }}</div>
 
     <div class="create" *ngIf="user" (click)="userService.logout()">Wyloguj się</div>

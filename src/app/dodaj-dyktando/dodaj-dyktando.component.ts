@@ -93,7 +93,8 @@ export class DodajDyktandoComponent implements OnInit {
       } else {
         /*SUBMITTING****************************/
         const dyktandoText = this.addDyktando.value.dyktando;
-        let dLength = "short";
+        let dLength: "short"|"middle"|"long"
+        dLength= "short";
         if (dyktandoText > 300) {
           dLength = "middle";
         }

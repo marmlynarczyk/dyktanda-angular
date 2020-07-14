@@ -3,11 +3,6 @@ import { CommonModule } from '@angular/common';
 import {DodajDyktandoComponent} from './dodaj-dyktando.component'
 import { ReactiveFormsModule} from '@angular/forms'
 
-
-
-
-
-
 @NgModule({
   declarations: [DodajDyktandoComponent],
   imports: [

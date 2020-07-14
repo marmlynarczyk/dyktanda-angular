@@ -21,20 +21,20 @@ option:optionParams
     
    }  
  handleChange(event){   
-  
+  let target = this.dyktandaSelect[this.name].options[event.target.value].value
   if(this.name === "dLength"){    
-    this.getdata.dLength$.next(this.dyktandaSelect[this.name].options[event.target.value].value)
+    this.getdata.dLength$.next(target)
   }
   if(this.name === "classNum"){
-    this.getdata.classNum$.next(this.dyktandaSelect[this.name].options[event.target.value].value)
+    this.getdata.classNum$.next(target)
   }
   if(this.name === "tests"){
-    this.getdata.tests$.next(this.dyktandaSelect[this.name].options[event.target.value].value)
+    this.getdata.tests$.next(target)
   }
   if(this.name === "sort"){
     this.getdata.orderBy$.next({
-      orderBy:this.dyktandaSelect[this.name].options[event.target.value].value[0],
-      order:this.dyktandaSelect[this.name].options[event.target.value].value[1]
+      orderBy:target[0],
+      order:target[1]
     })
   }
  }

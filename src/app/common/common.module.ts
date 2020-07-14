@@ -13,12 +13,14 @@ import { DyktandoBoxComponent } from './dyktando-box/dyktando-box.component';
 import {stringToBoxDate} from './stringToBoxDate.pipe';
 import { LoginComponent } from './modal/login/login.component';
 import { CloseButtonComponent } from './modal/close-button/close-button.component';
+import {DLengthToPlPipe} from './dyktando-box/dLengthToPl.pipe'
 
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateUserComponent } from './modal/create-user/create-user.component';
 import { GenericMsgComponent } from './modal/generic-msg/generic-msg.component';
 import { CustomSelectComponent } from './custom-select/custom-select.component';
+
 
 
 
@@ -39,10 +41,8 @@ import { CustomSelectComponent } from './custom-select/custom-select.component';
     CloseButtonComponent,    
     CreateUserComponent,
     GenericMsgComponent,
-    CustomSelectComponent,
-    
-   
-    
+    CustomSelectComponent,   
+    DLengthToPlPipe
   ],
   imports: [CommonModule,RouterModule,ReactiveFormsModule],
   exports:[FooterComponent,
@@ -58,6 +58,7 @@ import { CustomSelectComponent } from './custom-select/custom-select.component';
     CreateUserComponent,
     GenericMsgComponent,
     CustomSelectComponent
+    
     ]
 })
 export class CommonModules {}
