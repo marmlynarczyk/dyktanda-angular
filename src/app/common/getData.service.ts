@@ -63,7 +63,8 @@ export class getData {
     ).pipe(
       switchMap(([classNum$, dLength$, tests$, orderBy, limit]) =>
         afs
-          .collection("dyktanda", (ref) => {          
+          .collection("dyktanda", (ref) => { 
+            console.log(dLength$)         
             let query:
               | firebase.firestore.CollectionReference
               | firebase.firestore.Query = ref;              
@@ -71,7 +72,7 @@ export class getData {
               query = query.where("classNum", "==", classNum$);
             }
             if (dLength$!==null&&dLength$!=='all') {
-              query = query.where("length", "==", dLength$);
+              query = query.where("dLength", "==", dLength$);
             }
             if (tests$!==null&&tests$!=='all') {
               query = query.where("tests", "==", tests$);

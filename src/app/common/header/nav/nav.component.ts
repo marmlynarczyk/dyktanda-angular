@@ -9,7 +9,6 @@ import {linksService} from '../../links.service'
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
   open;
   links;
   constructor(private appState: appStateService,private linksS:linksService) { }
