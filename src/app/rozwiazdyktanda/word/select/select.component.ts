@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { answerObj } from "../../../common/parseDyktanda/answer-obj";
+import { answerObj } from "../../../common/parseDyktanda/answerObj";
 import { dyktandoDataService } from "../../dyktandoData.service";
 import {mainClass} from '../../../common/parseDyktanda/main-class'
 

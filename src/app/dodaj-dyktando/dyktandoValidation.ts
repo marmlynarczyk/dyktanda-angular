@@ -1,9 +1,9 @@
 
 
-export const dyktandoValidation = str => {
+export const dyktandoValidation = (str:string):string|{index:number,length:number,msg:string} => {
 
       
-    const hasSingleBrackets = str => {
+    const hasSingleBrackets = (str:string) => {
         const errorMsg = {length:1,msg:'Nawias musi posiadać odpowiadającą parę'}
         let open = false;
         const curlyBrackets = [...findAll(str, /{/g), ...findAll(str, /}/g)].sort(
@@ -32,7 +32,7 @@ export const dyktandoValidation = str => {
       };
 
 
-    const findAll = (str,regex) =>{   
+    const findAll = (str:string,regex:RegExp) =>{   
         const founded = [];
       const matches = str.matchAll(regex);
       for (let match of matches) {

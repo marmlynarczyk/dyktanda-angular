@@ -1,21 +1,5 @@
 import {findAll} from './findAll'
-
-
-class answerObj {
-    answers:string[]
-    comment:string
-    correctAnswer:number
-    selected:null|number
-  constructor(answers:string[], comment:string, correctAnswer:number) {
-    this.answers = answers;
-    this.comment = comment;
-    this.correctAnswer = correctAnswer;
-    this.selected = null;
-  }
-  isAnswerCorrect():boolean {
-      return  this.selected=== this.correctAnswer    
-  }
-}
+import {answerObj} from './answerObj'
 
 export const toAnswerObj = (str:string):answerObj =>{
   let answers = [],comment,correctAnswer

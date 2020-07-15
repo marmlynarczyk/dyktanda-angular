@@ -1,6 +1,4 @@
-import {findAll} from "./findAll"
-
-export const splitOnCurlyBrackets = str => {
+export const splitOnCurlyBrackets = (str:string):string[] => {
     const strings = [];
     let temp = "";
     for (let c = 0; c < str.length; ++c) {
@@ -18,6 +16,4 @@ export const splitOnCurlyBrackets = str => {
     }
     return strings;
   };
-
-
 

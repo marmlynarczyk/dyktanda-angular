@@ -1,10 +1,8 @@
-
-
-
 import { findAll } from "./findAll";
-export const hasSingleBrackets = str => {
+
+export const hasSingleBrackets = (str:string):false|{index:number,length:number,msg:string} => {
   const errorMsg = {length:1,msg:'Nawias musi posiadać odpowiadającą parę'}
-  let open = false;
+  let open:boolean|number = false;
   const curlyBrackets = [...findAll(str, /{/g), ...findAll(str, /}/g)].sort(
     (a, b) => a.index - b.index
   );

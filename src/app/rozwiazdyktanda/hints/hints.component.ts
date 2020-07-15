@@ -6,7 +6,7 @@ import {
   SimpleChange,
   SimpleChanges,
 } from "@angular/core";
-import { answerObj } from "../../common/parseDyktanda/answer-obj";
+import { answerObj } from "../../common/parseDyktanda/answerObj";
 import { dyktandoDataService } from "../dyktandoData.service";
 import { isString } from "../isString";
 import { mainClass } from "../../common/parseDyktanda/main-class";

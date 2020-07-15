@@ -1,11 +1,11 @@
 import {findAll} from "./findAll"
 
-export const splitToWords = str =>{
+export const splitToWords = (str:string):string[] =>{
     
     const regExp = /,|\.|\?\|\!|:|\n|\s|{|}/g
     const matches = findAll(str,regExp)
     const wordSplitters = [0]
-    const words = []    
+    const words:string[] = []    
 
     let inside = false
 

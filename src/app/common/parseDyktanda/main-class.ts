@@ -12,7 +12,7 @@ export class mainClass {
       this.wholeWord = wholeWord(array);
       this.numberOfLetters = this.wholeWord.length;
     }
-    isWordCorrect() {
+    isWordCorrect():boolean {
       let isCorrect = true;
       this.subObjects.forEach(el => {
         if(el.correctAnswer !== el.selected){

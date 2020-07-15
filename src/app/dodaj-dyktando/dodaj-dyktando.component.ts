@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { dyktandoValidation } from "./dyktandoValidation.js";
+import { dyktandoValidation } from "./dyktandoValidation";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { dyktandaSelectOptions } from "../common/dyktandaSelectOptions.service";
 import { UserService, userObj } from "../common/user.service";
 import { appStateService } from "../common/app-state.service";
-import { findAll } from "../common/helpers/findAll";
+import { findAll } from "../common/parseDyktanda/findAll";
 import { Dyktando } from "../common/dyktanda.interface";
 import { sendData } from "../common/sendData.service";
 
@@ -62,12 +62,17 @@ export class DodajDyktandoComponent implements OnInit {
     } else {
       let start: number;
       let end: number;
-      let spaces: [{ value: string; index: number }];
+      let spaces: { value: string; index: number }[];
       spaces = findAll(this.addDyktando.value.dyktando, /\s/g);
+      let validationResult:any;
+      if(this.user){
+        validationResult = dyktandoValidation(
+          this.addDyktando.value.dyktando
+        );
+      }else{
 
-      const validationResult = dyktandoValidation(
-        this.addDyktando.value.dyktando
-      );
+      }
+      
       if (typeof validationResult !== "string") {
         for (let c = 0; c < spaces.length; ++c) {
           let currentS = spaces[c].index;

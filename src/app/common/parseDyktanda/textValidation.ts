@@ -17,11 +17,11 @@ const checkForError = (select, regex) => {
  */
 
 
-export const textValidation = str => {
-  let current = false;
+export const textValidation = (str:string):""|{index:number,length:number,msg:string} => {
+ 
   const selects = findAll(str, /{.+?}|{}/g);
 
-  current = hasSingleBrackets(str);
+  const current = hasSingleBrackets(str);
   if (current) {
     return current;
   }
